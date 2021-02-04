@@ -1,0 +1,63 @@
+.cardDetailPlan__border {
+    border-radius: 10px;
+    border: solid 2px #f0f2fa;
+    width: 40vw;
+    margin-top: 2vw;
+}
+
+.cardDetailPlan__title-content {
+
+}
+
+.cardDetailPlan__title-text {
+    color: #8e94ad;
+    padding: 3%;
+    background-color: #f0f2fa;
+    text-align: center;
+}
+
+.cardDetailPlan__subtitle {
+    color: #5d6378;
+    font-size: 16px;
+    margin-bottom: 1vh;
+}
+
+.cardDetailPlan__ammount {
+    color: #5d6378;
+    font-size: 34px;
+}
+
+.cardDetailPlan__typePlan-content {
+    margin-top: 1vh;
+    border-radius: 15px;
+    background-color: #83cc5e;
+    width: fit-content;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    padding: 1% 5%;
+}
+
+.cardDetailPlan__typePlan-imageContent {
+    text-align: center;
+    border-left: 3px solid #f0f2fa;
+}
+
+.cardDetailPlan__typePlan-image {
+    margin-left: 25%;
+    margin-top: 10%;
+    width: 8vw;
+}
+
+.cardDetailPlan__body-general {
+    padding: 4% 8%;
+}
+
+.cardDetailPlan__coverage {
+    padding-bottom: 5%;
+    border-bottom: 3px solid #f0f2fa;
+}
+
+.cardDetailPlan__body-benefits {
+    padding: 0% 8% 7% 8%;
+}

@@ -1,0 +1,22 @@
+.itemBenefit__enabled {
+    color: #5d6378;
+}
+
+.itemBenefit__disabled {
+    color: #c5cbe0;
+    text-decoration:line-through;
+}
+
+.itemBenefit__icon {
+    height: 2.5vh;
+    margin-right: 1vw;
+    margin-bottom: -0.4vh;
+}
+
+.itemBenefit {
+    margin-top: 2vh;
+}
+
+.temBenefit__enfasis {
+    font-size: 24px;
+}

@@ -1,0 +1,36 @@
+.rightSection__back-border {
+    margin-left: -3vw;
+    width: 25px;
+    height: 25px;
+    border: solid 1px #2f80ed;
+    color: #2f80ed;
+    border-radius: 50px;
+    margin-bottom: 5vh;
+    margin-top: -0.3vh;
+}
+
+.rightSection__back-icon {
+    margin-left: 9px;
+    margin-bottom: 0px;
+}
+
+.rightSection__back-stepActual {
+    color: #2f80ed;
+    margin-left: -3.5vw;
+}
+
+.rightSection__textRadio {
+    color: dimgrey;
+    margin-top: 2.5vh;
+    font-size: 16px;
+}
+
+.rightSection__back-iconRotate {
+    margin-left: 9px;
+    margin-bottom: 0px;
+    transform: rotate(
+            -90deg
+    );
+    width: 1vw;
+    height: 2vh;
+}
