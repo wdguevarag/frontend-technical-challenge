@@ -1,38 +1,32 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import {Grid, withStyles} from '@material-ui/core';
 
-import iconShield from '../assets/images/gl_shield-20x20.png';
-import iconMobile from '../assets/images/gl_mobile-20x20.png';
-import iconMoney from '../assets/images/icon-money.png';
-import iconClinic from '../assets/images/icon-clinica.png';
-
 import imgCenter from '../assets/images/Illustration-1.png';
-import ItemLogin from "../components/itemLogin/ItemLoginComponent";
 
 import TextField from "@material-ui/core/TextField";
 import MenuItem from '@material-ui/core/MenuItem';
 
-import Policies from "../components/policies/PoliciesComponent";
-
 // @ts-ignore
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import StepOf from "../components/stepOf/StepOfComponent";
 
-import Radio, { RadioProps } from '@material-ui/core/Radio';
+import Radio, {RadioProps} from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+
 import {shallowEqual, useSelector} from "react-redux";
 
 import typeDocs from '../assets/data/typeDocs'
+
+import './style.css';
 
 function StepOnePage() {
 
     const history = useHistory();
 
     // @ts-ignore
-    const { person } = useSelector(store => store, shallowEqual)
+    const {person} = useSelector(store => store, shallowEqual)
 
     const [typeDoc, setTypeDoc] = useState('1');
     const [typeDocSize, setTypeDocSize] = useState(8);
@@ -144,7 +138,7 @@ function StepOnePage() {
         checked: {},
     })((props: RadioProps) => <Radio color="default" {...props} />);
 
-    useEffect(()=>{
+    useEffect(() => {
 
         // eslint-disable-next-line
         !person.document ? history.push("/start") : '';
@@ -165,8 +159,8 @@ function StepOnePage() {
 
     }, [person])
 
-    useEffect(()=>{
-        if(fromValues.insured) setStateButtonContinue('enabled');
+    useEffect(() => {
+        if (fromValues.insured) setStateButtonContinue('enabled');
     }, [fromValues.insured])
 
     return (
@@ -273,7 +267,6 @@ function StepOnePage() {
                             </Grid>
 
 
-
                             <Grid item sm={10}>
                                 <div className={'rightSection__personalInput'}>
                                     <TextField
@@ -288,8 +281,6 @@ function StepOnePage() {
                                 </div>
 
                             </Grid>
-
-
 
                             <Grid item sm={10}>
                                 <div className={'rightSection__personalInput'}>
@@ -317,9 +308,12 @@ function StepOnePage() {
                             <Grid item sm={10}>
                                 <FormControl component="fieldset">
                                     <div className={'rightSection__textRadio'}>Género</div>
-                                    <RadioGroup aria-label="gender" name="gender1" value={valueGender} onChange={handleChangeGender}>
-                                        <FormControlLabel disabled value="male" control={<GreenRadio />} label="Masculino" />
-                                        <FormControlLabel disabled value="female" control={<GreenRadio />} label="Femenino" />
+                                    <RadioGroup aria-label="gender" name="gender1" value={valueGender}
+                                                onChange={handleChangeGender}>
+                                        <FormControlLabel disabled value="male" control={<GreenRadio/>}
+                                                          label="Masculino"/>
+                                        <FormControlLabel disabled value="female" control={<GreenRadio/>}
+                                                          label="Femenino"/>
                                     </RadioGroup>
                                 </FormControl>
                             </Grid>
@@ -327,16 +321,20 @@ function StepOnePage() {
                             <Grid item sm={10}>
                                 <FormControl component="fieldset">
                                     <div className={'rightSection__textRadio'}>¿A quién vamos a asegurar?</div>
-                                    <RadioGroup aria-label="gender" name="insured" value={valueInsured} onChange={handleChangeInsured}>
-                                        <FormControlLabel value="me" control={<GreenRadio />} label="Solo a mi" />
-                                        <FormControlLabel value="family" control={<GreenRadio />} label="A mi y a mi familia" />
+                                    <RadioGroup aria-label="gender" name="insured" value={valueInsured}
+                                                onChange={handleChangeInsured}>
+                                        <FormControlLabel value="me" control={<GreenRadio/>} label="Solo a mi"/>
+                                        <FormControlLabel value="family" control={<GreenRadio/>}
+                                                          label="A mi y a mi familia"/>
                                     </RadioGroup>
                                 </FormControl>
                             </Grid>
 
                             <Grid item sm={12}>
                                 <div className={'rightSection__personalInput rightSection__content-alignRight'}>
-                                    <button className={`non-selectable rightSection__personalButton pointer button__${stateButtonContinue}`} onClick={validateData}>
+                                    <button
+                                        className={`non-selectable rightSection__personalButton pointer button__${stateButtonContinue}`}
+                                        onClick={validateData}>
                                         CONTINUAR {' >'}
                                     </button>
                                 </div>

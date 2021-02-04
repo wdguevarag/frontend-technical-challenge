@@ -21,6 +21,8 @@ import {getDataByApi} from '../store/actions/consumerApiActions'
 import optionList from '../assets/data/optionList'
 import typeDocs from '../assets/data/typeDocs'
 
+import './style.css';
+
 function StartPage() {
 
     const history = useHistory();
@@ -123,12 +125,10 @@ function StartPage() {
         if (fromValues.document.length === typeDocSize) {
             setProgressState('show')
             dispatch(getDataByApi(fromValues.document));
-        }
-        else setProgressState('hidden')
+        } else setProgressState('hidden')
     }, [fromValues.document])
 
     useEffect(() => {
-        console.log('person.error=> ', person.error)
         if (person.error) {
             setValidateApi(true)
             setValidateApiMessage('show')
@@ -138,7 +138,7 @@ function StartPage() {
             setValidateApiMessage('hidden')
             setProgressState('hidden')
         }
-        if(fromValues.phone) setProgressState('hidden')
+        if (fromValues.phone) setProgressState('hidden')
     }, [person.error, fromValues.phone])
 
     useEffect(() => {
@@ -241,7 +241,7 @@ function StartPage() {
 
                             <Grid item sm={2}>
                                 <div className={`rightSection__loader rightSection__message-${progressState}`}>
-                                    <CircularProgress />
+                                    <CircularProgress/>
                                 </div>
                             </Grid>
 

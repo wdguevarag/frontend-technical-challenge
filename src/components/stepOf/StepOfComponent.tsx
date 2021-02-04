@@ -4,7 +4,7 @@ import './style.css';
 import iconBack from '../../assets/images/iconBack.svg';
 import {Grid} from "@material-ui/core";
 
-function StepOf(props: {step: number, of: number, redirect: any}) {
+function StepOf(props: { step: number, of: number, redirect: any }) {
 
     return (
 
@@ -20,7 +20,7 @@ function StepOf(props: {step: number, of: number, redirect: any}) {
                 </Grid>
             </Grid>
         </div>
-  );
+    );
 }
 
 export default StepOf;

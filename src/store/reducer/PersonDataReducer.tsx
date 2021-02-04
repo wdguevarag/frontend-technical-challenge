@@ -14,7 +14,6 @@ const initialState = {
 
 
 export const PersonDataReducer = (state = initialState, action: any) => {
-    console.log('action=> ', action)
     switch (action.type) {
         case TYPES.personData:
             return {

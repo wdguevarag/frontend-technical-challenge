@@ -15,6 +15,8 @@ import iconBack from '../assets/images/iconBack.svg';
 
 import plans from "../assets/data/plans"
 
+import './style.css';
+
 function StepTwoPage() {
 
     const history = useHistory();
@@ -98,7 +100,8 @@ function StepTwoPage() {
 
 
                         <div className={'rightSection__textService cardDetailPlan__coverage'}>
-                            Revisa nuestros <div className={'rightSection__textService-bold'}>servicios y exclusiones</div>
+                            Revisa nuestros <div className={'rightSection__textService-bold'}>servicios y
+                            exclusiones</div>
                         </div>
 
                         <div className={'rightSection__textService-menu cardDetailPlan__coverage'}>
@@ -125,11 +128,13 @@ function StepTwoPage() {
 
                         <div className={'rightSection__personalInput rightSection__content-alignRight'}>
 
-                            <button className={`rightSection__personalButton rightSection__personalButton-withoutBorder pointer`}>
+                            <button
+                                className={`rightSection__personalButton rightSection__personalButton-withoutBorder pointer`}>
                                 ENVIAR COTIZACIÓN POR CORREO
                             </button>
 
-                            <button className={`rightSection__personalButton rightSection__personalButton-buy pointer`} onClick={validateData}>
+                            <button className={`rightSection__personalButton rightSection__personalButton-buy pointer`}
+                                    onClick={validateData}>
                                 COMPRAR PLAN
                             </button>
                         </div>

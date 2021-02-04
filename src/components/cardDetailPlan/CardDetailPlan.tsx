@@ -3,36 +3,10 @@ import {Grid} from '@material-ui/core';
 import './style.css';
 
 import planImage from '../../assets/images/Illustration.png';
-import checkUnselected from '../../assets/images/gl_unselected.png';
-import {useSelector} from "react-redux";
+
 import ItemBenefit from "../itemBenefit/ItemBenefit";
 
-const detailPlans = [
-    {
-        planId: 0,
-        coverageMax: 1,
-        name: 'BÁSICO',
-        benefits: [true, true, false, false, false, false]
-    },
-    {
-        planId: 1,
-        coverageMax: 5,
-        name: 'AVANZADO',
-        benefits: [true, true, true, true, false, false]
-    },
-    {
-        planId: 2,
-        coverageMax: 10,
-        name: 'PREMIUM',
-        benefits: [true, true, true, true, true, false]
-    },
-    {
-        planId: 3,
-        coverageMax: 20,
-        name: 'FULL',
-        benefits: [true, true, true, true, true, true]
-    }
-]
+import detailPlans from '../../assets/data/detailPlans'
 
 function CardDetailPlan(props: {selectedPlan: number}) {
 
@@ -43,7 +17,6 @@ function CardDetailPlan(props: {selectedPlan: number}) {
     },[props.selectedPlan])
 
     return (
-
 
             <div className={`pointer non-selectable cardDetailPlan__border`}>
 
@@ -79,8 +52,6 @@ function CardDetailPlan(props: {selectedPlan: number}) {
                     <ItemBenefit benefits={selectedPlan.benefits}/>
                 </div>
             </div>
-
-
 
   );
 }

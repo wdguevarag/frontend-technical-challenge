@@ -11,7 +11,6 @@
 
 .rightSection__back-icon {
     margin-left: 9px;
-    margin-bottom: 0px;
 }
 
 .rightSection__back-stepActual {
@@ -27,7 +26,6 @@
 
 .rightSection__back-iconRotate {
     margin-left: 9px;
-    margin-bottom: 0px;
     transform: rotate(
             -90deg
     );
